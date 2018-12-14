@@ -5,7 +5,7 @@ import com.zxc.product.domain.po.ProductInfo;
 import java.util.List;
 
 /**
- * TODO...
+ * 商品service
  *
  * @author Zhou RunMing
  * @date 2018/12/13
