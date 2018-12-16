@@ -1,24 +1,18 @@
-package com.zxc.product.domain.po;
+package com.zxc.order.order.domain.dto;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
  * @author Zhou RunMing
- * @Date 2018-12-13
+ * @Date 2018-12-16
  */
-@Table(name = "ProductInfo")
 @Data
-@Entity
-public class ProductInfo  implements Serializable {
+public class ProductInfo implements Serializable{
 
-    @Id
     private String productId;
     /**
      * 商品名称

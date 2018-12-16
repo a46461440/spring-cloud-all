@@ -1,5 +1,6 @@
 package com.zxc.product.service;
 
+import com.zxc.product.domain.dto.ProductStockInfo;
 import com.zxc.product.domain.po.ProductInfo;
 
 import java.util.List;
@@ -16,5 +17,9 @@ public interface ProductService {
      * 查询所有在架商品列表
      */
     List<ProductInfo> findUpAll();
+
+    List<ProductInfo> findByProductIdIn(List<String> productIdList);
+
+    void decreaseStock(List<ProductStockInfo> list);
 
 }

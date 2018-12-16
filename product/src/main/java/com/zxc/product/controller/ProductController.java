@@ -1,5 +1,6 @@
 package com.zxc.product.controller;
 
+import com.zxc.product.domain.dto.ProductStockInfo;
 import com.zxc.product.domain.po.ProductCategory;
 import com.zxc.product.domain.po.ProductInfo;
 import com.zxc.product.domain.vo.ProductInfoVO;
@@ -10,9 +11,7 @@ import com.zxc.product.service.ProductService;
 import com.zxc.product.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +73,22 @@ public class ProductController {
             productVOList.add(productVO);
         });
         return productVOList;
+    }
+
+    /**
+     * 获取商品列表通过商品id
+     * @param productIdList
+     * @return
+     */
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> getProductListForOrder(@RequestBody List<String> productIdList) {
+        List<ProductInfo> list = this.productService.findByProductIdIn(productIdList);
+        return list;
+    }
+
+    @PostMapping("/stock/decrease")
+    public void decreaseStock(@RequestBody List<ProductStockInfo> list) {
+        this.productService.decreaseStock(list);
     }
 
 }

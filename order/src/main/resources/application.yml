@@ -12,5 +12,8 @@ eureka:
   client:
     service-url:
       defaultUrl: http://server1:8761/eureka
+PRODUCT:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 server:
   port: 1201
