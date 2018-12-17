@@ -1,0 +1,6 @@
+eureka:
+  client:
+    service-url.defaultZone: http://server1:8761/eureka
+spring:
+  application:
+    name: config
