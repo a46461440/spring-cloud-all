@@ -4,3 +4,22 @@ eureka:
 spring:
   application:
     name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/a46461440/study-config
+          username: 496461440@qq.com
+          password: Aa412629
+          basedir: F:/cloud-config-basedir/
+  rabbitmq:
+    addresses: localhost:5672
+    username: guest
+    password: guest
+server:
+  port: 1301
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health", "info", "bus-refresh"]
