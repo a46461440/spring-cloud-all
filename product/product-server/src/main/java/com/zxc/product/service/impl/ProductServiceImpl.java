@@ -5,12 +5,16 @@ import com.zxc.product.domain.po.ProductInfo;
 import com.zxc.product.enums.ProductStatusEnum;
 import com.zxc.product.enums.ResultEnum;
 import com.zxc.product.exception.ProductException;
+import com.zxc.product.message.ProductStockSenderClient;
 import com.zxc.product.repository.ProductInfoRepository;
 import com.zxc.product.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -22,10 +26,14 @@ import java.util.Optional;
  * @date 2018/12/13
  */
 @Service
+@Slf4j
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductInfoRepository productInfoRepository;
+
+    @Autowired
+    private ProductStockSenderClient productStockSenderClient;
 
     @Override
     public List<ProductInfo> findUpAll() {
@@ -37,9 +45,26 @@ public class ProductServiceImpl implements ProductService {
         return this.productInfoRepository.findByProductIdIn(productIdList);
     }
 
-    @Override
+    /**
+     * 扣库存并且存入缓存
+     * @param list
+     */
     @Transactional
+    @Override
     public void decreaseStock(List<ProductStockInfo> list) {
+        //DB扣库存
+        List<ProductStockInfo> productStockInfoList = this.decreaseStockInDB(list);
+        //Redis存库存
+        this.productStockSenderClient.output().send(MessageBuilder.withPayload(productStockInfoList).build());
+    }
+
+    /**
+     * 在db中扣除库存
+     * @param list 购物车信息
+     * @return
+     */
+    public List<ProductStockInfo> decreaseStockInDB(List<ProductStockInfo> list) {
+        List<ProductStockInfo> productStockInfoList = new ArrayList<>(list.size() * 4 / 3);
         list.forEach(productStockInfo -> {
             Optional<ProductInfo> productInfoOptional =
                     this.productInfoRepository.findById(productStockInfo.getProductId());
@@ -53,7 +78,10 @@ public class ProductServiceImpl implements ProductService {
             }
             this.productInfoRepository.updateProductStock(productInfo.getProductStock(), productStockInfo.getProductQuantity(),
                     Arrays.asList(productStockInfo.getProductId()));
+            productStockInfo.setProductQuantity(afterDecrease);
+            productStockInfoList.add(productStockInfo);
+            this.log.info(productInfo.toString());
         });
-
+        return productStockInfoList;
     }
 }

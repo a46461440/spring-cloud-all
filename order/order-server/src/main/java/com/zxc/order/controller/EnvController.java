@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class EnvController {
 
-    @Value("${env}")
+    @Value("${env:env}")
     public String env;
 
     @GetMapping("/getEnv")
