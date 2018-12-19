@@ -11,5 +11,12 @@
 
     <artifactId>order-common</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zxc</groupId>
+            <artifactId>product-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

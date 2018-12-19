@@ -46,14 +46,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * 扣库存并且存入缓存
+     * 扣库存并且发送当前商品信息到MQ
      * @param list
      */
     @Transactional
     @Override
     public void decreaseStock(List<ProductStockInfo> list) {
         //DB扣库存
-        List<ProductStockInfo> productStockInfoList = this.decreaseStockInDB(list);
+        List<ProductInfo> productStockInfoList = this.decreaseStockInDB(list);
         //Redis存库存
         this.productStockSenderClient.output().send(MessageBuilder.withPayload(productStockInfoList).build());
     }
@@ -63,8 +63,8 @@ public class ProductServiceImpl implements ProductService {
      * @param list 购物车信息
      * @return
      */
-    public List<ProductStockInfo> decreaseStockInDB(List<ProductStockInfo> list) {
-        List<ProductStockInfo> productStockInfoList = new ArrayList<>(list.size() * 4 / 3);
+    public List<ProductInfo> decreaseStockInDB(List<ProductStockInfo> list) {
+        List<ProductInfo> productInfoList = new ArrayList<>(list.size() * 4 / 3);
         list.forEach(productStockInfo -> {
             Optional<ProductInfo> productInfoOptional =
                     this.productInfoRepository.findById(productStockInfo.getProductId());
@@ -78,10 +78,9 @@ public class ProductServiceImpl implements ProductService {
             }
             this.productInfoRepository.updateProductStock(productInfo.getProductStock(), productStockInfo.getProductQuantity(),
                     Arrays.asList(productStockInfo.getProductId()));
-            productStockInfo.setProductQuantity(afterDecrease);
-            productStockInfoList.add(productStockInfo);
-            this.log.info(productInfo.toString());
+            productInfo.setProductStock(afterDecrease);
+            productInfoList.add(productInfo);
         });
-        return productStockInfoList;
+        return productInfoList;
     }
 }

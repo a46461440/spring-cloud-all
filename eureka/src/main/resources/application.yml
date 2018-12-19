@@ -3,7 +3,7 @@ spring:
     name: eureka
 
 #eureka.environment=dev
-# ²»ÒªÊ¹ÓÃlocalhost×÷Îªurl,·ñÔòÔÚeureka¹ÜÀí½çÃæ²»»áÏÔÊ¾¼¯ÈºĞÅÏ¢
+# ï¿½ï¿½ÒªÊ¹ï¿½ï¿½localhostï¿½ï¿½Îªurl,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eurekaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ²»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Èºï¿½ï¿½Ï¢
 eureka:
   client:
     register-with-eureka: false
@@ -11,3 +11,5 @@ eureka:
     #  ,http://server2:8762/eureka,http://server3:8763/eureka
   server:
       enable-self-preservation: false
+server:
+  port: 8761

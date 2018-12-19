@@ -11,3 +11,5 @@ eureka:
     #  ,http://server2:8762/eureka,http://server3:8763/eureka
   server:
       enable-self-preservation: false
+server:
+  port: 8761
