@@ -63,7 +63,7 @@ public class UserInfoController {
             return ResultVOUtil.error(ResultVOStatus.ROLE_ERROR);
         }
 
-        CookieUtil.set(response, CookieConstant.OPEN_ID, "ABC", CookieConstant.maxAge);
+        CookieUtil.set(response, CookieConstant.OPEN_ID, "XYZ", CookieConstant.maxAge);
         return ResultVOUtil.success();
     }
 
