@@ -1,6 +1,6 @@
 package com.zxc.order.exception;
 
-import com.zxc.order.menus.OrderBindingResultEnum;
+import com.zxc.order.menus.OrderResultEnum;
 
 /**
  * 订单异常类,继承自{@link RuntimeException}
@@ -17,7 +17,7 @@ public class OrderException extends RuntimeException {
         this.code = code;
     }
 
-    public OrderException(OrderBindingResultEnum orderBindingResultEnum) {
+    public OrderException(OrderResultEnum orderBindingResultEnum) {
         super(orderBindingResultEnum.getMessage());
         this.code = orderBindingResultEnum.getCode();
     }

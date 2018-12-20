@@ -2,9 +2,11 @@ package com.zxc.order.service.impl;
 
 import com.google.gson.Gson;
 import com.zxc.order.domain.po.OrderMaster;
+import com.zxc.order.exception.OrderException;
+import com.zxc.order.menus.OrderResultEnum;
 import com.zxc.order.menus.OrderStatus;
 import com.zxc.order.dao.OrderDetailRepository;
-import com.zxc.order.dao.OrderMasterRespository;
+import com.zxc.order.dao.OrderMasterRepository;
 import com.zxc.order.domain.dto.OrderDTO;
 import com.zxc.order.domain.po.OrderDetail;
 import com.zxc.order.menus.PayStatus;
@@ -28,9 +30,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
-    private OrderMasterRespository orderMasterRespository;
+    private OrderMasterRepository OrderMasterRepository;
 
     @Autowired
     private OrderDetailRepository orderDetailRepository;
@@ -101,7 +101,32 @@ public class OrderServiceImpl implements OrderService {
         BeanUtils.copyProperties(orderDTO, orderMasterCarry);
         setOrderMasterInCreateStatus(orderMasterCarry);
         orderMasterCarry.setOrderAmount(amountMoney);
-        this.orderMasterRespository.save(orderMasterCarry);
+        this.OrderMasterRepository.save(orderMasterCarry);
+        return orderDTO;
+    }
+
+    @Override
+    @Transactional
+    public OrderDTO finish(String orderId) {
+        //查询订单
+        Optional<OrderMaster> orderMasterOptional = this.OrderMasterRepository.findById(orderId);
+        if (!orderMasterOptional.isPresent())
+            throw new OrderException(OrderResultEnum.ORDER_NOT_EXITS);
+        //判断订单状态
+        if (!orderMasterOptional.get().getOrderStatus().equals(OrderStatus.NEW.getCode()))
+            throw new OrderException(OrderResultEnum.ORDER_STATUS_ERROR);
+        //修改订单状态
+        Integer affectRows = this.OrderMasterRepository.updateChangeStatus(orderId, OrderStatus.NEW.getCode(), OrderStatus.FINISHED.getCode());
+        if (affectRows < 1)
+            throw new OrderException(OrderResultEnum.ORDER_HAS_BEEN_CHANGE);
+        //查询订单详情
+        List<OrderDetail> orderDetails = orderDetailRepository.findByOrderIdIn(Arrays.asList(orderId));
+        if (orderDetails == null || orderDetails.size() == 0)
+            throw new OrderException(OrderResultEnum.ORDER_DETAIL_NOT_EXITS);
+        //构建返回对象
+        OrderDTO orderDTO = new OrderDTO();
+        BeanUtils.copyProperties(orderMasterOptional.get(), orderDTO);
+        orderDTO.setOrderDetailList(orderDetails);
         return orderDTO;
     }
 

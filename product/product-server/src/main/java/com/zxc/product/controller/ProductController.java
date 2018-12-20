@@ -40,6 +40,7 @@ public class ProductController {
      * 构造数据
      */
     @GetMapping("/list")
+    @CrossOrigin(allowCredentials = "true")//允许cookie跨域
     public ResultVO<List<ProductVO>> getList() {
         List<ProductInfo> productInfoList = this.productService.findUpAll();
         List<Integer> categoryTypeList = productInfoList.stream()

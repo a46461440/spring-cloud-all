@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -14,7 +15,8 @@ import java.util.Date;
  * @date 2018/12/16
  */
 @Data
-@Entity(name = "orderDetail")
+@Entity
+@Table(name = "orderDetail")
 public class OrderDetail {
 
     @Id

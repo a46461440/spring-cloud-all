@@ -24,4 +24,9 @@ public class OrderServiceImplTest extends OrderApplicationTests{
         });
     }
 
+    @Test
+    public void finish() {
+        this.orderService.finish("1545023509183921578");
+    }
+
 }

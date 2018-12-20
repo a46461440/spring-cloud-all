@@ -2,7 +2,7 @@ package com.zxc.order.utils.converter.domain;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.zxc.order.menus.OrderBindingResultEnum;
+import com.zxc.order.menus.OrderResultEnum;
 import com.zxc.order.domain.dto.OrderDTO;
 import com.zxc.order.domain.dto.OrderForm;
 import com.zxc.order.domain.po.OrderDetail;
@@ -37,7 +37,7 @@ public class OrderForm2OrderDTOConverter {
 //        gson.fromJson(orderForm.getItems(),orderDetailList.getClass());
         } catch (Exception e) {
             log.error("【json转换】错误,string = {}", orderForm.getItems());
-            throw new OrderException(OrderBindingResultEnum.PARAM_ERROR);
+            throw new OrderException(OrderResultEnum.PARAM_ERROR);
         }
         result.setOrderDetailList(orderDetailList);
         return result;

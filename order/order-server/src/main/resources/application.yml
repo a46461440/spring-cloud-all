@@ -1,0 +1,12 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+    getProductInfo: # commandKey的值,默认是方法名
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200

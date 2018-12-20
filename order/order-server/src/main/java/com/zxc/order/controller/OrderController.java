@@ -1,6 +1,6 @@
 package com.zxc.order.controller;
 
-import com.zxc.order.menus.OrderBindingResultEnum;
+import com.zxc.order.menus.OrderResultEnum;
 import com.zxc.order.domain.dto.OrderDTO;
 import com.zxc.order.domain.dto.OrderForm;
 import com.zxc.order.domain.vo.ResultVO;
@@ -14,6 +14,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -42,18 +43,28 @@ public class OrderController {
     public ResultVO create(@Valid OrderForm orderForm, BindingResult bindingResultResult) {
         if (bindingResultResult.hasErrors()) {
             this.log.error("【创建订单】参数不正确, orderForm={}", orderForm.toString());
-            throw new OrderException(OrderBindingResultEnum.PARAM_ERROR.getCode(),
+            throw new OrderException(OrderResultEnum.PARAM_ERROR.getCode(),
                     bindingResultResult.getFieldError().getDefaultMessage().toString());
         }
         //orderFomr -> orderDTO
         OrderDTO orderDTOCarry = OrderForm2OrderDTOConverter.convert(orderForm);
         if (orderDTOCarry != null && CollectionUtils.isEmpty(orderDTOCarry.getOrderDetailList())) {
             this.log.error("【创建订单】购物车信息为空");
-            throw new OrderException(OrderBindingResultEnum.CAR_EMPTY);
+            throw new OrderException(OrderResultEnum.CAR_EMPTY);
         }
         OrderDTO result = this.orderService.create(orderDTOCarry);
         ResultVO resultVO = ResultVOUtil.success(result.getOrderId());
         return resultVO;
+    }
+
+    /**
+     * 完成订单接口
+     * @param orderId
+     * @return
+     */
+    @PostMapping("/finish")
+    public ResultVO<OrderDTO> finish(@RequestParam("orderId") String orderId) {
+        return ResultVOUtil.success(this.orderService.finish(orderId));
     }
 
 }

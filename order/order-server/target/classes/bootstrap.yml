@@ -8,10 +8,6 @@ spring:
         service-id: CONFIG
       profile: dev
       label: master
-#    stream:
-#      bindings:
-#        myMessage:
-#          group: myMessage
 eureka:
   client:
     service-url:

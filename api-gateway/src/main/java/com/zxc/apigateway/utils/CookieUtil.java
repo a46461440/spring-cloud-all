@@ -1,4 +1,4 @@
-package com.zxc.user.utils;
+package com.zxc.apigateway.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

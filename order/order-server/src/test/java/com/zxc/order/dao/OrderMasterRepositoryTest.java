@@ -4,6 +4,7 @@ import com.zxc.order.OrderApplicationTests;
 import com.zxc.order.domain.po.OrderMaster;
 import com.zxc.order.menus.OrderStatus;
 import com.zxc.order.menus.PayStatus;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,11 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Component
-public class OrderMasterRespositoryTest extends OrderApplicationTests {
+@Slf4j
+public class OrderMasterRepositoryTest extends OrderApplicationTests {
 
     @Autowired
-    private OrderMasterRespository orderMasterRespository;
+    private OrderMasterRepository OrderMasterRepository;
 
     @Test
     public void testSave() {
@@ -32,8 +34,15 @@ public class OrderMasterRespositoryTest extends OrderApplicationTests {
         Date now = new Date();
         orderMaster.setCreateTime(now);
         orderMaster.setUpdateTime(now);
-        OrderMaster result = this.orderMasterRespository.save(orderMaster);
+        OrderMaster result = this.OrderMasterRepository.save(orderMaster);
         Assert.assertTrue(result != null);
         System.out.printf(result.toString());
+    }
+
+    @Test
+    public void testUpdateStatus() {
+        Integer affectRows = this.OrderMasterRepository.updateChangeStatus("1544940702006764669",
+                OrderStatus.NEW.getCode(), OrderStatus.FINISHED.getCode());
+        this.log.info(affectRows.toString());
     }
 }

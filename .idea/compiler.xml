@@ -15,7 +15,6 @@
         <module name="product-client" />
         <module name="product-common" />
         <module name="product-server" />
-        <module name="user" />
         <module name="user-client" />
         <module name="user-common" />
         <module name="user-server" />
