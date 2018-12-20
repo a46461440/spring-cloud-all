@@ -1,0 +1,3 @@
+spring:
+  zipkin:
+    base-url: localhost:9411

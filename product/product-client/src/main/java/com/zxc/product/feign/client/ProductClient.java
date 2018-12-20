@@ -16,7 +16,7 @@ import java.util.List;
  * @author Zhou RunMing
  * @date 2018/12/16
  */
-@FeignClient(value = "product")
+@FeignClient(value = "product", fallback = ProductClient.ProductClientFallback.class)
 @Component
 public interface ProductClient {
 
@@ -29,4 +29,22 @@ public interface ProductClient {
     @PostMapping("/product/stock/decrease")
     void decreaseStock(@RequestBody List<ProductStockInfo> list);
 
+    @Component
+    public static class ProductClientFallback implements ProductClient{
+
+        @Override
+        public String productMsg() {
+            return null;
+        }
+
+        @Override
+        public List<ProductInfo> getProductListForOrder(List<String> productIdList) {
+            return null;
+        }
+
+        @Override
+        public void decreaseStock(List<ProductStockInfo> list) {
+
+        }
+    }
 }
