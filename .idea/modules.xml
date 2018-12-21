@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/order/order.iml" filepath="$PROJECT_DIR$/order/order.iml" />
@@ -16,12 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/product/product-server/product-server.iml" filepath="$PROJECT_DIR$/product/product-server/product-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-all.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-all.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user/user-client/user-client.iml" filepath="$PROJECT_DIR$/user/user-client/user-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user-client/user-client.iml" filepath="$PROJECT_DIR$/user/user-client/user-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user-common/user-common.iml" filepath="$PROJECT_DIR$/user/user-common/user-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user/user-common/user-common.iml" filepath="$PROJECT_DIR$/user/user-common/user-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user/user-server/user-server.iml" filepath="$PROJECT_DIR$/user/user-server/user-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user-server/user-server.iml" filepath="$PROJECT_DIR$/user/user-server/user-server.iml" />
     </modules>
   </component>

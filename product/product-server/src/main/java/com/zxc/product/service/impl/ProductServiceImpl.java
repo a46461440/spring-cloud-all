@@ -14,6 +14,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -51,11 +52,12 @@ public class ProductServiceImpl implements ProductService {
      */
     @Transactional
     @Override
-    public void decreaseStock(List<ProductStockInfo> list) {
+    public Integer decreaseStock(List<ProductStockInfo> list) {
         //DB扣库存
         List<ProductInfo> productStockInfoList = this.decreaseStockInDB(list);
         //Redis存库存
         this.productStockSenderClient.output().send(MessageBuilder.withPayload(productStockInfoList).build());
+        return productStockInfoList.size();
     }
 
     /**
@@ -65,7 +67,7 @@ public class ProductServiceImpl implements ProductService {
      */
     public List<ProductInfo> decreaseStockInDB(List<ProductStockInfo> list) {
         List<ProductInfo> productInfoList = new ArrayList<>(list.size() * 4 / 3);
-        list.forEach(productStockInfo -> {
+        for (ProductStockInfo productStockInfo : list) {
             Optional<ProductInfo> productInfoOptional =
                     this.productInfoRepository.findById(productStockInfo.getProductId());
             if (!productInfoOptional.isPresent()) {
@@ -80,7 +82,7 @@ public class ProductServiceImpl implements ProductService {
                     Arrays.asList(productStockInfo.getProductId()));
             productInfo.setProductStock(afterDecrease);
             productInfoList.add(productInfo);
-        });
+        }
         return productInfoList;
     }
 }

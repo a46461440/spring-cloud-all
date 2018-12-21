@@ -17,6 +17,7 @@ public enum OrderResultEnum {
     ORDER_STATUS_ERROR(4, "订单状态错误"),
     ORDER_HAS_BEEN_CHANGE(5, "订单已被修改"),
     ORDER_DETAIL_NOT_EXITS(6, "订单详情不存在"),
+    PRODUCT_SERVER_ERROR(7, "商品服务调用出错"),
     ;
 
     private Integer code;

@@ -94,7 +94,9 @@ public class OrderServiceImpl implements OrderService {
                     return productStockInfo;
                 })
                 .collect(Collectors.toList());
-        this.productClient.decreaseStock(productStockInfoListNeedToDecreaseStock);
+        Integer affectRows = this.productClient.decreaseStock(productStockInfoListNeedToDecreaseStock);
+        if (affectRows != productStockInfoListNeedToDecreaseStock.size())
+            throw new OrderException(OrderResultEnum.PRODUCT_SERVER_ERROR);
         //订单入库
         OrderMaster orderMasterCarry = new OrderMaster();
         orderDTO.setOrderId(orderId);
@@ -142,6 +144,8 @@ public class OrderServiceImpl implements OrderService {
         }
         if (neetToSearchDB) {
             productInfoListResult = productClient.getProductListForOrder(ids);
+            if (productInfoListResult == null && productInfoListResult.size() == 0)
+                throw new OrderException(OrderResultEnum.PRODUCT_SERVER_ERROR);
             synchronized (this.redisTemplate) {
                 this.redisTemplate.opsForValue().multiSet(
                         productInfoListResult.stream().collect(

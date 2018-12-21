@@ -20,6 +20,6 @@ public interface ProductService {
 
     List<ProductInfo> findByProductIdIn(List<String> productIdList);
 
-    void decreaseStock(List<ProductStockInfo> list);
+    Integer decreaseStock(List<ProductStockInfo> list);
 
 }
