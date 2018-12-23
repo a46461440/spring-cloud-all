@@ -6,6 +6,10 @@ hystrix:
           thread:
             timeoutInMilliseconds: 3000
 spring:
+  security:
+    user:
+      name: admin
+      password: 123456
   zipkin:
     sender:
       type: web

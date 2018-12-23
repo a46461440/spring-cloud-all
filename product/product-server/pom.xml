@@ -12,6 +12,11 @@
     <artifactId>product-server</artifactId>
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-security</artifactId>-->
+        <!--</dependency>-->
+
         <dependency>
             <groupId>com.zxc</groupId>
             <artifactId>product-common</artifactId>

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: admin
+  security:
+    user:
+      name: admin
+      password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8761/eureka
+server:
+  port: 1601
