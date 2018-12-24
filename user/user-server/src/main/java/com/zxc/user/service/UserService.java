@@ -15,4 +15,6 @@ public interface UserService {
      */
     UserInfo findByOpenid(String openid);
 
+    UserInfo findByUsernameAndPassword(String username, String password);
+
 }
