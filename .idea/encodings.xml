@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order" charset="UTF-8" />
@@ -12,6 +15,7 @@
     <file url="file://$PROJECT_DIR$/product/product-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/product-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/product-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swagger/swagger-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/user-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/user-common" charset="UTF-8" />

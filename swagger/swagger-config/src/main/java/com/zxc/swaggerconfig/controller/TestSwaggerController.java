@@ -20,7 +20,7 @@ public class TestSwaggerController {
     @ApiOperation(value = "普通测试swagger",notes = "输出hello world")
     @GetMapping("/hello")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "hello", value = "输出内容", required = true, dataType = "String")
+            @ApiImplicitParam(name = "hello", value = "输出内容", required = true, dataType = "String", paramType = "query")
     })
     public String sayHello(@ApiParam(value = "输出参数", defaultValue = "hello") @RequestParam("hello") String hello) {
         return hello;

@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
+        <module name="api-gateway-common" />
+        <module name="api-gateway-server" />
         <module name="config" />
         <module name="eureka" />
         <module name="order-client" />
@@ -15,6 +16,7 @@
         <module name="product-client" />
         <module name="product-common" />
         <module name="product-server" />
+        <module name="swagger-config" />
         <module name="user-client" />
         <module name="user-common" />
         <module name="user-server" />
@@ -22,6 +24,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-gateway" target="1.8" />
+      <module name="api-gateway-common" target="1.8" />
+      <module name="api-gateway-server" target="1.8" />
       <module name="config" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="order" target="1.8" />
@@ -32,6 +36,8 @@
       <module name="product-client" target="1.8" />
       <module name="product-common" target="1.8" />
       <module name="product-server" target="1.8" />
+      <module name="swagger" target="1.5" />
+      <module name="swagger-config" target="1.8" />
       <module name="user" target="1.8" />
       <module name="user-client" target="1.8" />
       <module name="user-common" target="1.8" />
