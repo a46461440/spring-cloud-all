@@ -12,10 +12,7 @@ import com.zxc.user.utils.ResultVOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -88,6 +85,12 @@ public class UserInfoController {
                 token, maxAge, TimeUnit.SECONDS);
         CookieUtil.set(response, CookieConstant.OPEN_ID, token, CookieConstant.maxAge);
         return ResultVOUtil.success();
+    }
+
+    @GetMapping("/login")
+    public String login(@RequestBody UserInfo userInfo) {
+
+        return null;
     }
 
 }
