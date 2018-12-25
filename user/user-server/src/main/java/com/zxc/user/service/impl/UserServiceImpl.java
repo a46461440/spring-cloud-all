@@ -20,4 +20,9 @@ public class UserServiceImpl implements UserService {
     public UserInfo findByOpenid(String openid) {
         return this.userInfoRepository.findByOpenid(openid);
     }
+
+    @Override
+    public UserInfo findByUsernameAndPassword(String username, String password) {
+        return this.userInfoRepository.findByUsernameAndPassword(username, password);
+    }
 }

@@ -3,6 +3,8 @@ package com.zxc.apigateway.utils.jwt;
 import io.jsonwebtoken.*;
 import org.springframework.beans.BeanUtils;
 
+import static com.zxc.apigateway.utils.jwt.Constant.PASS_WORD;
+
 /**
  * Jwt工具类
  *
@@ -43,6 +45,11 @@ public class JWTHelper {
         return compactJws;
     }
 
+    public static String generateToken(JwtInfo jwtInfo) throws Exception {
+        byte[] priKey = RsaKeyHelper.generatePrivateKey(PASS_WORD);
+        return generateToken(jwtInfo, priKey);
+    }
+
     private static JwtBuilder buildJwtBuilder(JwtInfo jwtInfo) {
         JwtBuilder jwtBuilder = Jwts.builder();
         BeanUtils.copyProperties(jwtInfo, jwtBuilder);
@@ -50,6 +57,11 @@ public class JWTHelper {
             jwtBuilder.claim(property.getKey(), property.getValue());
         });
         return jwtBuilder;
+    }
+
+    public static Jws<Claims> parserToken(String token) throws Exception {
+        byte[] pubKeyPath = RsaKeyHelper.generatePublicKey(PASS_WORD);
+        return parserToken(token, pubKeyPath);
     }
 
     /**
