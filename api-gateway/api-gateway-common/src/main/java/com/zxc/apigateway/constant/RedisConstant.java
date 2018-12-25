@@ -1,4 +1,4 @@
-package com.zxc.user.constant;
+package com.zxc.apigateway.constant;
 
 /**
  * @author Zhou RunMing
@@ -6,6 +6,6 @@ package com.zxc.user.constant;
  */
 public interface RedisConstant {
 
-    String TOKEN = "token_%s";
+    String TOKEN = "jwt_token_%s";
 
 }
