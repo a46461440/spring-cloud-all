@@ -12,4 +12,6 @@ public interface CookieConstant {
 
     Integer maxAge = 7200;
 
+    String JWT_TOKEN = "jwt-auth-token";
+
 }
