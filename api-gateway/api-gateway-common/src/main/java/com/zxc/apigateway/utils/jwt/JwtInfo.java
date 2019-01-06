@@ -9,5 +9,13 @@ import java.io.Serializable;
  * @Date 2018-12-24
  */
 public class JwtInfo extends DefaultClaims implements Serializable {
+    private String role;
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

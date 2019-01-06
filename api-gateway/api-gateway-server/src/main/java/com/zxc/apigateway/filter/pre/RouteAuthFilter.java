@@ -32,7 +32,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * @Date 2018-12-24
  */
 @Slf4j
-@Component
+//@Component
 public class RouteAuthFilter extends ZuulFilter {
 
     @Autowired

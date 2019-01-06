@@ -99,9 +99,7 @@ public class JWTHelper {
     public static JwtInfo getInfoFromToken(String token, String pubKeyPath) throws Exception {
         Jws<Claims> claimsJws = parserToken(token, pubKeyPath);
         Claims body = claimsJws.getBody();
-        JwtInfo jwtInfo = new JwtInfo();
-        BeanUtils.copyProperties(body, jwtInfo);
-        return jwtInfo;
+        return convertClaimsBody2JwtInfo(body);
     }
 
     /**
@@ -117,6 +115,12 @@ public class JWTHelper {
         Claims body = claimsJws.getBody();
         JwtInfo jwtInfo = new JwtInfo();
         BeanUtils.copyProperties(body, jwtInfo);
+        return jwtInfo;
+    }
+
+    public static JwtInfo convertClaimsBody2JwtInfo(Claims claims) {
+        JwtInfo jwtInfo = new JwtInfo();
+        BeanUtils.copyProperties(claims, jwtInfo);
         return jwtInfo;
     }
 }

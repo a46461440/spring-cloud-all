@@ -112,6 +112,7 @@ public class UserInfoController {
         jwtInfo.setId(userInfo.getId());
         jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 1000).toDate());
         jwtInfo.setSubject(userInfo.getUsername());
+        jwtInfo.setRole("admin");
         jwtInfo.put("user", userInfo);
         try {
             String token = JWTHelper.generateToken(jwtInfo);
