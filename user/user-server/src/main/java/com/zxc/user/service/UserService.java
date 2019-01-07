@@ -2,6 +2,8 @@ package com.zxc.user.service;
 
 import com.zxc.user.domain.po.UserInfo;
 
+import java.util.List;
+
 /**
  * @author Zhou RunMing
  * @Date 2018-12-19
@@ -16,5 +18,7 @@ public interface UserService {
     UserInfo findByOpenid(String openid);
 
     UserInfo findByUsernameAndPassword(String username, String password);
+
+    List<UserInfo> findByUsername(String username);
 
 }

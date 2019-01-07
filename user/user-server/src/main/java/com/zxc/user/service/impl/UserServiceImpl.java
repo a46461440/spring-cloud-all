@@ -6,6 +6,8 @@ import com.zxc.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Zhou RunMing
  * @Date 2018-12-19
@@ -25,4 +27,11 @@ public class UserServiceImpl implements UserService {
     public UserInfo findByUsernameAndPassword(String username, String password) {
         return this.userInfoRepository.findByUsernameAndPassword(username, password);
     }
+
+    @Override
+    public List<UserInfo> findByUsername(String username) {
+        return this.userInfoRepository.findByUsername(username);
+    }
+
+
 }

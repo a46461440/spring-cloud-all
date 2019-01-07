@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -122,6 +123,11 @@ public class UserInfoController {
             return ResultVOUtil.error(JWT_TOKEN_ERROR);
         }
         return ResultVOUtil.success(LOGIN_SUCCESS);
+    }
+
+    @GetMapping("/list/{name}")
+    public List<UserInfo> getUserInfoByName(@PathVariable String name) {
+        return this.userService.findByUsername(name);
     }
 
 }

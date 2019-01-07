@@ -35,7 +35,12 @@
 			<artifactId>redisson</artifactId>
 			<version>3.7.4</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.0.7.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
