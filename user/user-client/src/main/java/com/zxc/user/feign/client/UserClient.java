@@ -14,11 +14,18 @@ import java.util.List;
  * @author Zhou RunMing
  * @date 2019/1/7
  */
-@FeignClient("user")
+@FeignClient(value = "user", fallback = UserClientFallback.class)
 @Component
 public interface UserClient {
 
     @GetMapping("/user/list/{name}")
     List<UserInfo> getUserInfoByName(@PathVariable("name") String name);
+}
 
+class UserClientFallback implements UserClient{
+
+    @Override
+    public List<UserInfo> getUserInfoByName(String name) {
+        return null;
+    }
 }

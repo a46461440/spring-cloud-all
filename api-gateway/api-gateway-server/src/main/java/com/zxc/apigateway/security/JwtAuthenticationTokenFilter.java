@@ -1,10 +1,9 @@
 package com.zxc.apigateway.security;
 
+import com.zxc.apigateway.security.config.JwtSecurityConfig;
 import com.zxc.apigateway.security.domain.JwtAuthenticationToken;
 import com.zxc.apigateway.utils.CookieUtil;
 import com.zxc.apigateway.utils.jwt.JWTHelper;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -21,7 +20,7 @@ import static com.zxc.apigateway.constant.CookieConstant.JWT_TOKEN;
 
 /**
  * Jwt Security使用时需要的的JwtFilter
- * @see com.zxc.apigateway.config.JwtSecurityConfig
+ * @see JwtSecurityConfig
  *
  * @author Zhou RunMing
  * @date 2019/1/6
@@ -30,7 +29,7 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 
 
     public JwtAuthenticationTokenFilter() {
-        super("/product/**");
+        super("/**");
     }
 
     @Override

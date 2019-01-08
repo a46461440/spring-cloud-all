@@ -21,7 +21,8 @@ public class GirlController {
 
     @GetMapping("/print")
     public String print() {
-        return girlConfig.toString();
+        throw new RuntimeException("you are a bad guy");
+//        return girlConfig.toString();
     }
 
 }

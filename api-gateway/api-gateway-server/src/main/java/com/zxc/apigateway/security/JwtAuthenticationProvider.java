@@ -1,5 +1,6 @@
 package com.zxc.apigateway.security;
 
+import com.zxc.apigateway.security.config.JwtSecurityConfig;
 import com.zxc.apigateway.security.domain.JwtAuthenticationToken;
 import com.zxc.apigateway.security.domain.JwtUserDetails;
 import com.zxc.apigateway.utils.jwt.JWTHelper;
@@ -19,7 +20,7 @@ import java.util.List;
 
 /**
  * Jwt Security验证器
- * @see  com.zxc.apigateway.config.JwtSecurityConfig
+ * @see  JwtSecurityConfig
  *
  * @author Zhou RunMing
  * @date 2019/1/6

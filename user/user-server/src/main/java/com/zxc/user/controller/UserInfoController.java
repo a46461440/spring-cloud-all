@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import static com.zxc.apigateway.constant.CookieConstant.JWT_TOKEN;
 import static com.zxc.apigateway.constant.RedisConstant.TOKEN;
 import static com.zxc.apigateway.utils.jwt.Constant.EXPIRE_TIME;
 import static com.zxc.product.enums.ResultVOStatus.JWT_TOKEN_ERROR;
@@ -97,28 +98,24 @@ public class UserInfoController {
     }
 
     @GetMapping("/login")
-    public ResultVO login(UserInfo userInfoParam, HttpServletResponse response) {
+    public ResultVO login(UserInfo userInfoParam, HttpServletRequest request, HttpServletResponse response) {
         UserInfo userInfo = this.userService.findByUsernameAndPassword(userInfoParam.getUsername(), userInfoParam.getPassword());
         if (userInfo == null)
             return ResultVOUtil.error(USER_NOT_FOUNT);
-        boolean userHasLogin = this.stringRedisTemplate.opsForValue().get(String.format(TOKEN, userInfo.getId())) != null;
-        if (!userHasLogin) {
-            return this.setJwtTokenInCookieAndRemoteCache(userInfo, response);
-        }
-        return ResultVOUtil.success();
+        return this.setJwtTokenInCookieAndRemoteCache(userInfo, response);
     }
 
     private ResultVO setJwtTokenInCookieAndRemoteCache(UserInfo userInfo, HttpServletResponse response) {
         JwtInfo jwtInfo = new JwtInfo();
         jwtInfo.setId(userInfo.getId());
-        jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 1000).toDate());
+        jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 10000).toDate());
         jwtInfo.setSubject(userInfo.getUsername());
         jwtInfo.setRole("admin");
         jwtInfo.put("user", userInfo);
         try {
             String token = JWTHelper.generateToken(jwtInfo);
-            CookieUtil.set(response, CookieConstant.JWT_TOKEN, token, CookieConstant.maxAge);
-            this.stringRedisTemplate.opsForValue().set(String.format(TOKEN, userInfo.getId()), token, 60, TimeUnit.SECONDS);
+            CookieUtil.set(response, JWT_TOKEN, token, CookieConstant.maxAge);
+            this.stringRedisTemplate.opsForValue().set(String.format(TOKEN, userInfo.getId()), token, 7, TimeUnit.DAYS);
         } catch (Exception e) {
             return ResultVOUtil.error(JWT_TOKEN_ERROR);
         }

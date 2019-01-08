@@ -1,6 +1,8 @@
 package com.zxc.user.domain.po;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,6 +14,8 @@ import java.util.Date;
  */
 @Data
 @Entity(name = "userInfo")
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserInfo {
 
     @Id

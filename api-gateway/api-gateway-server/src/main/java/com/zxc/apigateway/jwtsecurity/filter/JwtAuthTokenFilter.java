@@ -36,7 +36,7 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter{
         if (jwtToken != null && !httpServletRequest.getRequestURI().contains("/favicon.ico")) {
             try {
                 Claims body = JWTHelper.parserToken(jwtToken).getBody();
-                Authentication authentication = new UsernamePasswordAuthenticationToken(body.getSubject(), jwtToken, JwtUtil.convertStringList2GrantedAuthorityList(Arrays.asList("admin")));
+                Authentication authentication = new UsernamePasswordAuthenticationToken(body.getSubject(), jwtToken, JwtUtil.convertStringList2GrantedAuthorityList(Arrays.asList("ROLE_admin")));
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (ExpiredJwtException e) {
                 this.log.error("jwt token has been expired:{}", e.getMessage());

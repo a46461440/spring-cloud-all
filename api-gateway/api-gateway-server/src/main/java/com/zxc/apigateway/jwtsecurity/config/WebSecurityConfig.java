@@ -1,12 +1,11 @@
 package com.zxc.apigateway.jwtsecurity.config;
 
-import com.zxc.apigateway.jwtsecurity.JwtAuthEntryPoint;
+import com.zxc.apigateway.jwtsecurity.JwtAccessProblemHandler;
 import com.zxc.apigateway.jwtsecurity.filter.JwtAuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,7 +31,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
-    private JwtAuthEntryPoint jwtAuthEntryPoint;
+    private JwtAccessProblemHandler jwtAccessProblemHandler;
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -68,9 +67,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
             .csrf().disable()
             .authorizeRequests()
                 .antMatchers("/user/user/login/**").permitAll()
-                .antMatchers("/**").hasRole("admin")
+                .antMatchers("/**").hasRole("admin2")
         .and()
-            .exceptionHandling().authenticationEntryPoint(this.jwtAuthEntryPoint)
+            .exceptionHandling().authenticationEntryPoint(this.jwtAccessProblemHandler)
+            .accessDeniedHandler(this.jwtAccessProblemHandler)
         .and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(this.jwtAuthTokenFilter(), UsernamePasswordAuthenticationFilter.class);
