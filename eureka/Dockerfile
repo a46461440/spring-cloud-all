@@ -1,5 +1,5 @@
 # FROM registry.cn-hangzhou.aliyuncs.com/joint-union/java8:latest
-FROM registry.cn-hangzhou.aliyuncs.com/zxcxcg/java8:1.1
+FROM 99taxis/mini-java8:1.1
 
 ADD target/*.jar eureka.jar
 
