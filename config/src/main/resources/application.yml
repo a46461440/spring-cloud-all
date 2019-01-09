@@ -1,6 +1,6 @@
 eureka:
   client:
-    service-url.defaultZone: http://localhost:8761/eureka
+    service-url.defaultZone: http://eureka.server.ip:8761/eureka
   instance:
     prefer-ip-address: true
 spring:
@@ -15,7 +15,7 @@ spring:
           password: Aa412629
           basedir: F:/cloud-config-basedir/
   rabbitmq:
-    addresses: localhost:5672
+    addresses: rabbit.ip:5672
     username: guest
     password: guest
 server:
