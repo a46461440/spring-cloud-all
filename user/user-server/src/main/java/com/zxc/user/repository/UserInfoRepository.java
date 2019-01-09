@@ -2,6 +2,9 @@ package com.zxc.user.repository;
 
 import com.zxc.user.domain.po.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,4 +19,11 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
     UserInfo findByUsernameAndPassword(String username, String password);
 
     List<UserInfo> findByUsername(String username);
+
+    @Query(value = "SELECT D.c_role FROM user_info A " +
+            "INNER JOIN user_role_group_relation B ON A.id=B.n_uid " +
+            "INNER JOIN role_group C ON B.n_gid=C.n_gid " +
+            "INNER JOIN role D ON C.n_rid=D.n_rid " +
+            "WHERE A.id=:userId", nativeQuery = true)
+    List<String> findRoleByUserId(@Param("userId") Integer userId);
 }
