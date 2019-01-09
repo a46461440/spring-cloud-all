@@ -7,7 +7,7 @@ spring:
 eureka:
   client:
     register-with-eureka: false
-    service-url.defaultZone: http://server1:8761/eureka
+    service-url.defaultZone: http://eureka.server.ip:8761/eureka
     #  ,http://server2:8762/eureka,http://server3:8763/eureka
   server:
       enable-self-preservation: false

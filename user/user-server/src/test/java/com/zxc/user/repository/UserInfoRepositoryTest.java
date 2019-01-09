@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 @Component
@@ -22,6 +24,12 @@ public class UserInfoRepositoryTest extends UserTest{
         String password = "ZXC";
         UserInfo userInfo = this.userInfoRepository.findByUsernameAndPassword(name, password);
         this.log.info(userInfo.toString());
+    }
+
+    @Test
+    public void testFindRoleByUserId() {
+        List<String> roles = this.userInfoRepository.findRoleByUserId(1);
+        roles.stream().forEach(role -> System.out.println(role));
     }
 
 }
