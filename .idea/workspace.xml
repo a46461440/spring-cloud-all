@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4544f201-b020-4abf-94dd-460bf81914c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/config/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka/target/" />
     <ignored path="$PROJECT_DIR$/order/target/" />
@@ -287,6 +285,24 @@
             <path>
               <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
+              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
+              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
+              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
@@ -704,7 +720,7 @@
       <workItem from="1546863206456" duration="12690000" />
       <workItem from="1546928019909" duration="15818000" />
       <workItem from="1546949291278" duration="488000" />
-      <workItem from="1546995132220" duration="4413000" />
+      <workItem from="1546995132220" duration="4605000" />
     </task>
     <task id="LOCAL-00001" summary="完成异步队列订单同步&#10;创建网关服务&#10;创建用户服务">
       <created>1545216891422</created>
@@ -790,7 +806,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546949428358</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="改地址为域名使docker容器能互相访问">
+      <created>1546999714749</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1546999714750</updated>
+    </task>
+    <task id="LOCAL-00014" summary="w">
+      <created>1546999842523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1546999842523</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -826,7 +856,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213158000" />
+    <option name="totallyTimeSpent" value="213350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -839,7 +869,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -847,7 +876,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22867803" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2937976" sideWeight="0.4946695" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2937976" sideWeight="0.4946695" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -858,7 +887,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37323177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37323177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4047878" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -892,7 +921,9 @@
     <MESSAGE value="Redisson配置" />
     <MESSAGE value="jwt+spring security完成" />
     <MESSAGE value="jwt+spring security基本功能完成,后续需要加入role等权限控制的集成(现在写死)" />
-    <option name="LAST_COMMIT_MESSAGE" value="jwt+spring security基本功能完成,后续需要加入role等权限控制的集成(现在写死)" />
+    <MESSAGE value="改地址为域名使docker容器能互相访问" />
+    <MESSAGE value="w" />
+    <option name="LAST_COMMIT_MESSAGE" value="w" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1005,6 +1036,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
