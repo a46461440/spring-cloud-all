@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4544f201-b020-4abf-94dd-460bf81914c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config-0.0.1-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eureka-0.0.1-SNAPSHOT.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/classes/com/zxc/config/ConfigApplication.class" afterPath="$PROJECT_DIR$/config/target/classes/com/zxc/config/ConfigApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT.jar.original" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/target/eureka-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/eureka/target/eureka-0.0.1-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/target/eureka-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/eureka/target/eureka-0.0.1-SNAPSHOT.jar.original" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config-0.0.1-SNAPSHOT.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eureka-0.0.1-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/controller/UserInfoController.class" afterPath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/controller/UserInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/repository/UserInfoRepository.class" afterPath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/repository/UserInfoRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/service/UserService.class" afterPath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/user/user-server/target/classes/com/zxc/user/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/resources/bootstrap.yml" afterPath="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/resources/bootstrap.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/classes/application.yml" afterPath="$PROJECT_DIR$/config/target/classes/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/surefire-reports/TEST-com.zxc.config.ConfigApplicationTests.xml" afterPath="$PROJECT_DIR$/config/target/surefire-reports/TEST-com.zxc.config.ConfigApplicationTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/target/surefire-reports/com.zxc.config.ConfigApplicationTests.txt" afterPath="$PROJECT_DIR$/config/target/surefire-reports/com.zxc.config.ConfigApplicationTests.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/target/classes/application.yml" afterPath="$PROJECT_DIR$/eureka/target/classes/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/target/surefire-reports/TEST-com.zxc.eureka.EurekaApplicationTests.xml" afterPath="$PROJECT_DIR$/eureka/target/surefire-reports/TEST-com.zxc.eureka.EurekaApplicationTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eureka/target/surefire-reports/com.zxc.eureka.EurekaApplicationTests.txt" afterPath="$PROJECT_DIR$/eureka/target/surefire-reports/com.zxc.eureka.EurekaApplicationTests.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/repository/UserInfoRepository.java" afterPath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/repository/UserInfoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/user/user-server/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/resources/bootstrap.yml" afterPath="$PROJECT_DIR$/user/user-server/src/main/resources/bootstrap.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java" afterPath="$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java" afterPath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java" afterPath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/src/test/java/com/zxc/user/repository/UserInfoRepositoryTest.java" afterPath="$PROJECT_DIR$/user/user-server/src/test/java/com/zxc/user/repository/UserInfoRepositoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/application.yml" afterPath="$PROJECT_DIR$/user/user-server/target/classes/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user-server/target/classes/bootstrap.yml" afterPath="$PROJECT_DIR$/user/user-server/target/classes/bootstrap.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka/target/" />
     <ignored path="$PROJECT_DIR$/order/target/" />
@@ -57,24 +45,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserInfoRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserInfoRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/repository/UserInfoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="399">
               <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
-                <marker date="1547029950743" expanded="true" signature="658:911" ph="SELECT D.c_r... user_info" />
+                <marker date="1547085060189" expanded="true" signature="658:911" ph="SELECT D.c_r... user_info" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInfoRepositoryTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/user-server/src/test/java/com/zxc/user/repository/UserInfoRepositoryTest.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+            <state relative-caret-position="399">
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+              <folding>
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfoController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="113" column="51" lean-forward="true" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultVOStatus.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product/product-common/src/main/java/com/zxc/product/enums/ResultVOStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultVOUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/utils/ResultVOUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+              <folding>
+                <element signature="e#972#973#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,7 +205,6 @@
         <option value="$PROJECT_DIR$/product/product-server/src/main/java/com/zxc/product/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/security/JwtAuthenticationTokenFilter.java" />
         <option value="$PROJECT_DIR$/user/user-client/pom.xml" />
-        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/test/java/com/zxc/apigateway/user/FeignClient.java" />
         <option value="$PROJECT_DIR$/order/order-server/pom.xml" />
         <option value="$PROJECT_DIR$/user/pom.xml" />
@@ -172,10 +215,8 @@
         <option value="$PROJECT_DIR$/common/src/main/java/com/zxc/common/utils/JwtUtil.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/jwtsecurity/UserPrinciple.java" />
-        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/jwtsecurity/UserDetailImpl.java" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/jwtsecurity/JwtAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/jwtsecurity/JwtAuthEntryPoint.java" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/jwtsecurity/config/WebSecurityConfig.java" />
@@ -190,9 +231,12 @@
         <option value="$PROJECT_DIR$/user/user-server/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/config/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/user/user-server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java" />
         <option value="$PROJECT_DIR$/user/user-server/src/test/java/com/zxc/user/repository/UserInfoRepositoryTest.java" />
         <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/repository/UserInfoRepository.java" />
+        <option value="$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java" />
       </list>
     </option>
   </component>
@@ -282,8 +326,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,191 +335,15 @@
               <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-              <item name="apigateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-              <item name="apigateway" type="462c0819:PsiDirectoryNode" />
-              <item name="jwtsecurity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-              <item name="apigateway" type="462c0819:PsiDirectoryNode" />
-              <item name="jwtsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-all" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="user-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxc" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="F:/idea_workspace/konka-wd-dev" />
+    <property name="last_opened_file_path" value="F:/idea_workspace/konka-wd-qd-dev" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -515,11 +383,11 @@
       <recent name="com.zxc.product.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\spring-cloud-all" />
       <recent name="F:\github\spring-cloud-all\api-gateway\api-gateway-server\src\main\java\com\zxc\apigateway\security" />
       <recent name="F:\IdeaWorkSpace\spring-cloud-all\api-gateway\api-gateway-server\src\main\java\com\zxc\apigateway" />
       <recent name="F:\github\spring-cloud-all\api-gateway\api-gateway-common\src\main\java\com\zxc\apigateway\utils" />
       <recent name="F:\github\spring-cloud-all\api-gateway\api-gateway-server\src\test" />
-      <recent name="F:\github\spring-cloud-all\api-gateway\api-gateway-server\src\main\resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zxc.apigateway.security.domain" />
@@ -527,117 +395,6 @@
       <recent name="com.zxc.apigateway.config" />
       <recent name="com.zxc.user.domain.service.impl" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/Dockerfile</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/eureka/Dockerfile</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -651,7 +408,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserInfoRepositoryTest.testFindRoleByUserId">
+  <component name="RunManager" selected="Spring Boot.UserApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zxc.apigateway.ApiGatewayApplication" />
@@ -970,7 +727,9 @@
       <workItem from="1546863206456" duration="12690000" />
       <workItem from="1546928019909" duration="15818000" />
       <workItem from="1546949291278" duration="488000" />
-      <workItem from="1546995132220" duration="21780000" />
+      <workItem from="1546995132220" duration="21836000" />
+      <workItem from="1547082671074" duration="2712000" />
+      <workItem from="1547178007397" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="完成异步队列订单同步&#10;创建网关服务&#10;创建用户服务">
       <created>1545216891422</created>
@@ -1077,19 +836,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546999876182</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="调试docker">
+      <created>1547033871213</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1547033871213</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FeignClientTest_testGetList - 2019.01.07 at 22h 01m 51s.xml">
-      <configuration name="FeignClientTest.testGetList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeignClientTest_testGetList - 2019.01.07 at 22h 02m 56s.xml">
-      <configuration name="FeignClientTest.testGetList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeignClientTest_testGetList - 2019.01.07 at 22h 07m 56s.xml">
-      <configuration name="FeignClientTest.testGetList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FeignClientTest_testGetList - 2019.01.07 at 22h 10m 55s.xml">
       <configuration name="FeignClientTest.testGetList" configurationId="JUnit" />
     </history-entry>
@@ -1111,9 +868,18 @@
     <history-entry file="UserInfoRepositoryTest_testFindRoleByUserId - 2019.01.09 at 18h 31m 44s.xml">
       <configuration name="UserInfoRepositoryTest.testFindRoleByUserId" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserInfoRepositoryTest_testFindRoleByUserId - 2019.01.10 at 09h 33m 57s.xml">
+      <configuration name="UserInfoRepositoryTest.testFindRoleByUserId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserInfoRepositoryTest_testFindRoleByUserId - 2019.01.10 at 09h 47m 15s.xml">
+      <configuration name="UserInfoRepositoryTest.testFindRoleByUserId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserInfoRepositoryTest_testFindRoleByUserId - 2019.01.10 at 09h 50m 46s.xml">
+      <configuration name="UserInfoRepositoryTest.testFindRoleByUserId" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230525000" />
+    <option name="totallyTimeSpent" value="234604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1139,27 +905,27 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28182808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37323177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38084874" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38084874" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27345416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27985075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37105548" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37105548" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1205,53 +971,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/user-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zxc/common/config/RedissonConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-core/1.5.12/hystrix-core-1.5.12.jar!/com/netflix/hystrix/HystrixCommandProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="81" column="128" lean-forward="false" selection-start-line="81" selection-start-column="80" selection-end-line="81" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order/order-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.7.RELEASE/spring-boot-actuator-autoconfigure-2.0.7.RELEASE.jar!/META-INF/spring-configuration-metadata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1334,9 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="46" column="74" lean-forward="false" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1344,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,23 +1067,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/config/JwtSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/config/JwtSecurityConfig.java" />
     <entry file="file://$PROJECT_DIR$/api-gateway/api-gateway-server/src/main/java/com/zxc/apigateway/security/JwtSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,7 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1456,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,7 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1488,7 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,7 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,7 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,18 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="117" column="28" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
-          <folding>
-            <element signature="e#5023#5024#0" expanded="false" />
-            <element signature="e#5083#5084#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1571,7 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,25 +1255,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/domain/po/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-client/src/main/java/com/zxc/user/feign/client/UserClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/user-server/src/test/java/com/zxc/user/repository/UserInfoRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+        <state relative-caret-position="380">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/repository/UserInfoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="399">
           <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
-            <marker date="1547029950743" expanded="true" signature="658:911" ph="SELECT D.c_r... user_info" />
+            <marker date="1547085060189" expanded="true" signature="658:911" ph="SELECT D.c_r... user_info" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+          <folding>
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/utils/ResultVOUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product/product-common/src/main/java/com/zxc/product/enums/ResultVOStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/user-server/src/main/java/com/zxc/user/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="113" column="51" lean-forward="true" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -33,5 +33,10 @@ public class UserServiceImpl implements UserService {
         return this.userInfoRepository.findByUsername(username);
     }
 
+    @Override
+    public List<String> findRoleByUserId(Integer userId) {
+        return this.userInfoRepository.findRoleByUserId(userId);
+    }
+
 
 }
