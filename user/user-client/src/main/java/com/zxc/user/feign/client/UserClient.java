@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -20,6 +21,9 @@ public interface UserClient {
 
     @GetMapping("/user/list/{name}")
     List<UserInfo> getUserInfoByName(@PathVariable("name") String name);
+
+    @GetMapping("role/{userId}")
+    List<String> findRoleByUserId(@PathVariable("userId") Integer userId);
 }
 
 class UserClientFallback implements UserClient{
@@ -27,5 +31,10 @@ class UserClientFallback implements UserClient{
     @Override
     public List<UserInfo> getUserInfoByName(String name) {
         return null;
+    }
+
+    @Override
+    public List<String> findRoleByUserId(Integer userId) {
+        return Arrays.asList();
     }
 }

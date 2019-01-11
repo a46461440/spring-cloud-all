@@ -10,6 +10,7 @@ import com.zxc.user.enums.UserRole;
 import com.zxc.user.service.UserService;
 import com.zxc.user.utils.CookieUtil;
 import com.zxc.user.utils.ResultVOUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -35,6 +37,7 @@ import static com.zxc.product.enums.ResultVOStatus.USER_NOT_FOUNT;
  */
 @RestController
 @RequestMapping("/user")
+@Slf4j
 public class UserInfoController {
 
     @Autowired
@@ -102,29 +105,40 @@ public class UserInfoController {
         UserInfo userInfo = this.userService.findByUsernameAndPassword(userInfoParam.getUsername(), userInfoParam.getPassword());
         if (userInfo == null)
             return ResultVOUtil.error(USER_NOT_FOUNT);
-        return this.setJwtTokenInCookieAndRemoteCache(userInfo, response);
+        try {
+            this.setJwtTokenInCookieAndRemoteCache(userInfo, response);
+        } catch (Exception e) {
+            this.log.error(e.getMessage());
+            return ResultVOUtil.error(JWT_TOKEN_ERROR);
+        }
+        return ResultVOUtil.success(LOGIN_SUCCESS);
     }
 
-    private ResultVO setJwtTokenInCookieAndRemoteCache(UserInfo userInfo, HttpServletResponse response) {
+    private void setJwtTokenInCookieAndRemoteCache(UserInfo userInfo, HttpServletResponse response) throws Exception {
         JwtInfo jwtInfo = new JwtInfo();
         jwtInfo.setId(userInfo.getId());
         jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 10000).toDate());
         jwtInfo.setSubject(userInfo.getUsername());
-        jwtInfo.setRole("admin");
+        List<String> roles = this.userService.findRoleByUserId(Integer.valueOf(userInfo.getId()));
+        jwtInfo.setRole(String.join(",", roles));
         jwtInfo.put("user", userInfo);
         try {
             String token = JWTHelper.generateToken(jwtInfo);
             CookieUtil.set(response, JWT_TOKEN, token, CookieConstant.maxAge);
             this.stringRedisTemplate.opsForValue().set(String.format(TOKEN, userInfo.getId()), token, 7, TimeUnit.DAYS);
         } catch (Exception e) {
-            return ResultVOUtil.error(JWT_TOKEN_ERROR);
+            throw e;
         }
-        return ResultVOUtil.success(LOGIN_SUCCESS);
     }
 
     @GetMapping("/list/{name}")
     public List<UserInfo> getUserInfoByName(@PathVariable String name) {
         return this.userService.findByUsername(name);
+    }
+
+    @GetMapping("role/{userId}")
+    public List<String> findRoleByUserId(@PathVariable("userId") Integer userId) {
+        return this.userService.findRoleByUserId(userId);
     }
 
 }

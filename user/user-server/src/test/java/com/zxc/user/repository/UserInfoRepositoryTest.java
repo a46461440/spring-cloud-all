@@ -29,7 +29,7 @@ public class UserInfoRepositoryTest extends UserTest{
     @Test
     public void testFindRoleByUserId() {
         List<String> roles = this.userInfoRepository.findRoleByUserId(1);
-        roles.stream().forEach(role -> System.out.println(role));
+        this.log.info(String.join(",", roles));
     }
 
 }
