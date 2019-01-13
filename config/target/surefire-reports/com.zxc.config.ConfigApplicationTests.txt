@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.zxc.config.ConfigApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.388 s - in com.zxc.config.ConfigApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.955 s - in com.zxc.config.ConfigApplicationTests
