@@ -1,4 +1,4 @@
-package com.zxc.common;
+package com.zxc.common.java8;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,7 +38,7 @@ public class lambda {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    private static class Customer {
+    public static class Customer {
         private String name;
         private Integer age;
         private boolean sex;
