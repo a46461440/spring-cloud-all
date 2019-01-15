@@ -3,7 +3,6 @@ package com.zxc.common.java8;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
-import java.util.Comparator;
 import java.util.stream.Stream;
 
 /**
