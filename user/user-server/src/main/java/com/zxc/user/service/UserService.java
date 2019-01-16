@@ -22,6 +22,6 @@ public interface UserService {
 
     List<UserInfo> findByUsername(String username);
 
-    List<UserInfoWithRole> findRoleByUserId(Integer userId);
+    List<UserInfoWithRole> findRoleByUserId(String userId);
 
 }

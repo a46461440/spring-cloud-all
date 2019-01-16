@@ -1,6 +1,7 @@
 package com.zxc.user.repository;
 
 import com.zxc.user.UserTest;
+import com.zxc.user.domain.po.RoleGroup;
 import com.zxc.user.domain.po.UserInfo;
 import com.zxc.user.domain.po.UserInfoWithRole;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +15,7 @@ import static org.junit.Assert.*;
 
 @Component
 @Slf4j
-public class UserInfoRepositoryTest extends UserTest{
+public class UserInfoRepositoryTest extends UserTest {
 
     @Autowired
     private UserInfoRepository userInfoRepository;
@@ -24,12 +25,25 @@ public class UserInfoRepositoryTest extends UserTest{
         String name = "ZXC";
         String password = "ZXC";
         UserInfo userInfo = this.userInfoRepository.findByUsernameAndPassword(name, password);
-        this.log.info(userInfo.toString());
+        userInfo.getUserRoleGroupRelationList()
+                .stream()
+                .forEach(userRoleGroupRelation -> {
+                    List<RoleGroup> roleGroupList = userRoleGroupRelation.getRoleGroupList();
+                    roleGroupList
+                            .stream()
+                            .forEach(roleGroup -> {
+                                roleGroup.getRoleList()
+                                        .stream()
+                                        .forEach(role -> {
+                                            this.log.info(role.toString());
+                                        });
+                            });
+                });
     }
 
     @Test
     public void testFindRoleByUserId() {
-        List<UserInfoWithRole> roles = this.userInfoRepository.findRoleByUserId(1);
+        List<UserInfoWithRole> roles = this.userInfoRepository.findRoleByUserId("1");
         roles.stream()
                 .forEach(userInfoWithRole -> {
                     this.log.info(userInfoWithRole.toString());

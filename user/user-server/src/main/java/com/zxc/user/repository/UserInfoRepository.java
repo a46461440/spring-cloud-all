@@ -27,13 +27,13 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
             "A.password," +
             "A.openid," +
             "A.role," +
-            "A.create_time," +
-            "A.update_time," +
-            "D.c_role" +
-            ") FROM user_info A " +
-            "INNER JOIN user_role_group_relation B ON A.id=B.n_uid " +
-            "INNER JOIN role_group C ON B.n_gid=C.n_gid " +
-            "INNER JOIN role D ON C.n_rid=D.n_rid " +
-            "WHERE A.id=:userId", nativeQuery = true)
-    List<UserInfoWithRole> findRoleByUserId(@Param("userId") Integer userId);
+            "A.createTime," +
+            "A.updateTime," +
+            "D.cRole" +
+            ") FROM UserInfo A " +
+            "INNER JOIN com.zxc.user.domain.po.UserRoleGroupRelation B ON A.id=B.nUid " +
+            "INNER JOIN com.zxc.user.domain.po.RoleGroup C ON B.nGid=C.nGid " +
+            "INNER JOIN com.zxc.user.domain.po.Role D ON C.nRid=D.nRid " +
+            "WHERE A.id=:userId")
+    List<UserInfoWithRole> findRoleByUserId(@Param("userId") String userId);
 }

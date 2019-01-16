@@ -4,19 +4,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Zhou RunMing
  * @Date 2018-12-19
  */
 @Data
-@Entity(name = "userInfo")
+@Entity
+@Table(name = "UserInfo")
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserInfo {
+public class UserInfo  implements Serializable {
 
     @Id
     private String id;
@@ -40,5 +42,9 @@ public class UserInfo {
      * '修改时间'
      */
     private Date updateTime;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "nUid", cascade = CascadeType.ALL)
+    @Column(name = "id")
+    private List<UserRoleGroupRelation> userRoleGroupRelationList;
 
 }

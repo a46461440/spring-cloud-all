@@ -120,7 +120,7 @@ public class UserInfoController {
         jwtInfo.setId(userInfo.getId());
         jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 10000).toDate());
         jwtInfo.setSubject(userInfo.getUsername());
-        List<UserInfoWithRole> roles = this.userService.findRoleByUserId(Integer.valueOf(userInfo.getId()));
+        List<UserInfoWithRole> roles = this.userService.findRoleByUserId(userInfo.getId());
 //        jwtInfo.setRole(String.join(",", roles));
         jwtInfo.put("user", userInfo);
         try {
@@ -138,7 +138,7 @@ public class UserInfoController {
     }
 
     @GetMapping("role/{userId}")
-    public List<UserInfoWithRole> findRoleByUserId(@PathVariable("userId") Integer userId) {
+    public List<UserInfoWithRole> findRoleByUserId(@PathVariable("userId") String userId) {
         return this.userService.findRoleByUserId(userId);
     }
 
