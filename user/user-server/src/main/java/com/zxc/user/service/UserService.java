@@ -1,7 +1,7 @@
 package com.zxc.user.service;
 
 import com.zxc.user.domain.po.UserInfo;
-import org.springframework.data.repository.query.Param;
+import com.zxc.user.domain.po.UserInfoWithRole;
 
 import java.util.List;
 
@@ -22,6 +22,6 @@ public interface UserService {
 
     List<UserInfo> findByUsername(String username);
 
-    List<String> findRoleByUserId(Integer userId);
+    List<UserInfoWithRole> findRoleByUserId(Integer userId);
 
 }

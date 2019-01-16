@@ -1,7 +1,7 @@
 package com.zxc.apigateway.jwtsecurity;
 
 import com.zxc.user.domain.po.UserInfo;
-import com.zxc.user.feign.client.UserClient;
+import com.zxc.apigateway.feign.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,12 +26,13 @@ public class UserDetailImpl implements UserDetailsService{
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         List<UserInfo> userInfoList = this.userClient.getUserInfoByName(s);
+        List<String> roleList = this.userClient.findRoleByUserId(1);
         UserInfo userInfo = null;
         if (userInfoList != null && userInfoList.size() == 1) {
             userInfo = userInfoList.get(0);
         }
         if (userInfo != null) {
-            UserPrinciple userPrinciple = UserPrinciple.build(userInfo, Arrays.asList("admin"));
+            UserPrinciple userPrinciple = UserPrinciple.build(userInfo, roleList);
             return userPrinciple;
         }
         return null;

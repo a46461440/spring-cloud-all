@@ -2,7 +2,7 @@ package com.zxc.apigateway.user;
 
 import com.zxc.apigateway.ApiGatewayApplicationTests;
 import com.zxc.user.domain.po.UserInfo;
-import com.zxc.user.feign.client.UserClient;
+import com.zxc.apigateway.feign.client.UserClient;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

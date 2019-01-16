@@ -1,6 +1,7 @@
 package com.zxc.user.service.impl;
 
 import com.zxc.user.domain.po.UserInfo;
+import com.zxc.user.domain.po.UserInfoWithRole;
 import com.zxc.user.repository.UserInfoRepository;
 import com.zxc.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<String> findRoleByUserId(Integer userId) {
+    public List<UserInfoWithRole> findRoleByUserId(Integer userId) {
         return this.userInfoRepository.findRoleByUserId(userId);
     }
 

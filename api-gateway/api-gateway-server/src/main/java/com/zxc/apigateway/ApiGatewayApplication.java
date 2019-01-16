@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringCloudApplication
 @EnableZuulProxy
 @ComponentScan("com.zxc")
-@EnableFeignClients("com.zxc.user")
+@EnableFeignClients("com.zxc.apigateway.feign.client")
 public class ApiGatewayApplication {
 
 	public static void main(String[] args) {

@@ -2,6 +2,7 @@ package com.zxc.user.repository;
 
 import com.zxc.user.UserTest;
 import com.zxc.user.domain.po.UserInfo;
+import com.zxc.user.domain.po.UserInfoWithRole;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,11 @@ public class UserInfoRepositoryTest extends UserTest{
 
     @Test
     public void testFindRoleByUserId() {
-        List<String> roles = this.userInfoRepository.findRoleByUserId(1);
-        this.log.info(String.join(",", roles));
+        List<UserInfoWithRole> roles = this.userInfoRepository.findRoleByUserId(1);
+        roles.stream()
+                .forEach(userInfoWithRole -> {
+                    this.log.info(userInfoWithRole.toString());
+                });
     }
 
 }

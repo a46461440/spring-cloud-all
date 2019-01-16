@@ -5,6 +5,7 @@ import com.zxc.apigateway.utils.jwt.JWTHelper;
 import com.zxc.apigateway.utils.jwt.JwtInfo;
 import com.zxc.product.enums.ResultVOStatus;
 import com.zxc.user.domain.po.UserInfo;
+import com.zxc.user.domain.po.UserInfoWithRole;
 import com.zxc.user.domain.vo.ResultVO;
 import com.zxc.user.enums.UserRole;
 import com.zxc.user.service.UserService;
@@ -119,8 +120,8 @@ public class UserInfoController {
         jwtInfo.setId(userInfo.getId());
         jwtInfo.setExpiration(DateTime.now().plus(EXPIRE_TIME * 10000).toDate());
         jwtInfo.setSubject(userInfo.getUsername());
-        List<String> roles = this.userService.findRoleByUserId(Integer.valueOf(userInfo.getId()));
-        jwtInfo.setRole(String.join(",", roles));
+        List<UserInfoWithRole> roles = this.userService.findRoleByUserId(Integer.valueOf(userInfo.getId()));
+//        jwtInfo.setRole(String.join(",", roles));
         jwtInfo.put("user", userInfo);
         try {
             String token = JWTHelper.generateToken(jwtInfo);
@@ -137,7 +138,7 @@ public class UserInfoController {
     }
 
     @GetMapping("role/{userId}")
-    public List<String> findRoleByUserId(@PathVariable("userId") Integer userId) {
+    public List<UserInfoWithRole> findRoleByUserId(@PathVariable("userId") Integer userId) {
         return this.userService.findRoleByUserId(userId);
     }
 

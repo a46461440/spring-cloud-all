@@ -1,10 +1,3 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 4000
 spring:
   security:
     user:
@@ -13,7 +6,7 @@ spring:
   zipkin:
     sender:
       type: web
-    base-url: http://localhost:9411/
+    base-url: http://zipkin.ip:9411/
   sleuth:
       sampler:
         probability: 1
@@ -24,7 +17,20 @@ feign:
   client:
     config:
       user:
+        connectTimeout: 20000
         readTimeout: 20000
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+  eureka:
+    enabled: true
+  eager-load:
+    clients: user
 management:
   security:
     enabled: false
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 20000
+  ribbon-isolation-strategy: thread

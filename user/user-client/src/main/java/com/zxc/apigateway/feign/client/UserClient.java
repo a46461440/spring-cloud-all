@@ -1,4 +1,4 @@
-package com.zxc.user.feign.client;
+package com.zxc.apigateway.feign.client;
 
 import com.zxc.user.domain.po.UserInfo;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -22,7 +22,7 @@ public interface UserClient {
     @GetMapping("/user/list/{name}")
     List<UserInfo> getUserInfoByName(@PathVariable("name") String name);
 
-    @GetMapping("role/{userId}")
+    @GetMapping("/user/role/{userId}")
     List<String> findRoleByUserId(@PathVariable("userId") Integer userId);
 }
 

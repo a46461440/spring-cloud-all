@@ -36,10 +36,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Autowired
     private UserDetailsService userDetailsService;
 
-    @Bean
-    public JwtAuthTokenFilter jwtAuthTokenFilter() {
-        return new JwtAuthTokenFilter();
-    }
+    @Autowired
+    public JwtAuthTokenFilter jwtAuthTokenFilter;
 
     @Bean
     @Override
@@ -67,12 +65,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
             .csrf().disable()
             .authorizeRequests()
                 .antMatchers("/user/user/login/**").permitAll()
-                .antMatchers("/**").hasRole("admin2")
+                .antMatchers("/product/product/list/**").hasRole(String.format("%s_%s", "ROLE", "admin"))
+                .anyRequest().authenticated()
         .and()
             .exceptionHandling().authenticationEntryPoint(this.jwtAccessProblemHandler)
             .accessDeniedHandler(this.jwtAccessProblemHandler)
         .and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(this.jwtAuthTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(this.jwtAuthTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
