@@ -1,6 +1,7 @@
 package com.zxc.apigateway.feign.client;
 
 import com.zxc.apigateway.ApiGatewayApplicationTests;
+import com.zxc.user.domain.po.UserInfoWithRole;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +18,7 @@ public class UserClientTest extends ApiGatewayApplicationTests{
 
     @Test
     public void testUserClient() {
-        List<String> list = this.userClient.findRoleByUserId(1);
-        for (String s : list) {
-            this.log.info(s);
-        }
+        List<UserInfoWithRole> list = this.userClient.findRoleByUserId("1");
     }
 
 }

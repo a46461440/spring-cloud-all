@@ -2,10 +2,6 @@ package com.zxc.user.domain.po;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,12 +12,8 @@ import java.util.Date;
  * @date 2019/1/16
  */
 @Data
-@Table
-@Entity
 public class Role implements Serializable{
 
-    @Id
-    @GeneratedValue
     private Integer nRid;
 
     private String cRole;

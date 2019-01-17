@@ -1,15 +1,21 @@
 package com.zxc.user.domain.po;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Zhou RunMing
  * @Date 2018-12-19
  */
 @Data
-public class UserInfo {
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserInfo implements Serializable {
 
     private String id;
 
@@ -32,5 +38,7 @@ public class UserInfo {
      * '修改时间'
      */
     private Date updateTime;
+
+    private List<UserRoleGroupRelation> userRoleGroupRelationList;
 
 }

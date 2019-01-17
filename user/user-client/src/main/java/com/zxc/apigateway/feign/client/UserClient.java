@@ -1,6 +1,7 @@
 package com.zxc.apigateway.feign.client;
 
 import com.zxc.user.domain.po.UserInfo;
+import com.zxc.user.domain.po.UserInfoWithRole;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public interface UserClient {
     List<UserInfo> getUserInfoByName(@PathVariable("name") String name);
 
     @GetMapping("/user/role/{userId}")
-    List<String> findRoleByUserId(@PathVariable("userId") Integer userId);
+    List<UserInfoWithRole> findRoleByUserId(@PathVariable("userId") String userId);
 }
 
 class UserClientFallback implements UserClient{
@@ -34,7 +35,7 @@ class UserClientFallback implements UserClient{
     }
 
     @Override
-    public List<String> findRoleByUserId(Integer userId) {
+    public List<UserInfoWithRole> findRoleByUserId(String userId) {
         return Arrays.asList();
     }
 }
