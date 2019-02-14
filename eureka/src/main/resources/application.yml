@@ -1,6 +1,10 @@
 spring:
   application:
     name: eureka
+  data:
+    mongodb:
+      host: 47.96.18.57
+      port: 27017
 
 #eureka.environment=dev
 # ��Ҫʹ��localhost��Ϊurl,������eureka������治����ʾ��Ⱥ��Ϣ

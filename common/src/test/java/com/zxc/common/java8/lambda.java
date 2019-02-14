@@ -72,4 +72,13 @@ public class lambda {
         Customer customer = new Customer();
         consumer.andThen(consumer2).accept(customer);
     }
+
+    public void testFunctionInterface(Function<String, String> function, String s) {
+        log.info(function.andThen(so -> so + "s").apply(s));
+    }
+
+    @Test
+    public void testFunctionInterface() {
+        this.testFunctionInterface((s) -> s + "o", "s");
+    }
 }

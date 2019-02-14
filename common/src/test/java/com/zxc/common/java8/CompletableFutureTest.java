@@ -6,10 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.*;
 import java.util.function.*;
 
 /**
@@ -99,6 +96,7 @@ public class CompletableFutureTest {
         });
         completableFuture.thenApply(s -> s + "after");
         this.log.info(completableFuture.get());
+        this.log.info(completableFuture.thenApply(s -> s + "after").get());
 //        this.log.info(composeCompletableFuture.get());
         Thread.sleep(3000);
     }
