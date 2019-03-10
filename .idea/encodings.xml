@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/api-gateway-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />

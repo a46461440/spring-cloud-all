@@ -1,13 +1,25 @@
 spring:
-  application:
-    name: admin
   security:
     user:
-      name: admin
+      name: root
       password: 123456
+  application:
+    name: admin
+  profiles:
+    include: secure
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:8761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    metadata-map:
+      # 以下两个参数设置让admin server能够访问受保护(security)的应用
+      user.name: "root"
+      user.password: "123456"
 server:
   port: 1601
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

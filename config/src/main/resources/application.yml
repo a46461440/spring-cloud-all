@@ -3,6 +3,9 @@ eureka:
     service-url.defaultZone: http://eureka.server.ip:8761/eureka
   instance:
     prefer-ip-address: true
+    metadata-map:
+      user.name: 'admin'
+      user.password: '123456'
 spring:
   application:
     name: config
@@ -15,13 +18,20 @@ spring:
           password: Aa412629
           basedir: F:/cloud-config-basedir/
   rabbitmq:
-    addresses: rabbit.ip:5672
+    addresses: 127.0.0.1:5672
     username: guest
     password: guest
+  security:
+    user:
+      name: admin
+      password: 123456
 server:
-  port: 1301
+  port: 1302
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
-        include: ["health", "info", "bus-refresh"]
+        include: '*'
